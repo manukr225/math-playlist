@@ -1,58 +1,115 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", sans-serif;
+:root {
+  --bg: #f9f9f9;
+  --text: #222;
+  --accent: #3498db;
+  --card: #ffffff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --accent: #3498db;
+  --card: #1e1e1e;
 }
 
 body {
-  background: #f4f6f9;
-  color: #333;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 960px;
   margin: auto;
   padding: 2rem;
+}
+
+.logo {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+header {
   text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 header h1 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #2c3e50;
 }
 
-header p {
-  color: #555;
-  margin-bottom: 2rem;
+#darkModeToggle {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: var(--accent);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
 }
 
-.video-container {
+.video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.video-container iframe {
+.video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+}
+
+.video-links {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+}
+
+.video-links h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.video-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.video-links li {
+  margin: 0.5rem 0;
+}
+
+.video-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.video-links a:hover {
+  color: var(--accent);
 }
 
 footer {
   margin-top: 2rem;
-  color: #777;
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: #3498db;
-  text-decoration: none;
+  text-align: center;
+  color: #888;
 }
