@@ -8,38 +8,46 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="container">
-    <header>
+  <header>
+    <div class="logo-container">
       <img src="assets/logo.png" alt="Logo" class="logo" />
-      <div class="title-area">
-        <h1>UI/UX Design Playlist</h1>
-        <button id="darkModeToggle">🌙 Dark Mode</button>
-      </div>
-      <p>Level up your design skills with this YouTube playlist.</p>
-    </header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Popular Videos</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <div class="video-wrapper">
+  <main>
+    <section class="video-section">
+      <h1>Popular Videos</h1>
+      <div class="video-grid">
+        <!-- Grid of video thumbnails from the playlist -->
+        <div class="video-item">
+          <img src="assets/thumbnails/video1.jpg" alt="Video 1" />
+          <div class="video-overlay">
+            <a href="https://www.youtube.com/watch?v=wH1Up7WTefU" target="_blank">Watch Now</a>
+          </div>
+        </div>
+        <!-- Repeat for other videos -->
+      </div>
+    </section>
+
+    <section class="video-wrapper">
       <iframe
         src="https://www.youtube.com/embed/videoseries?list=PLAr0hfIonl-E4U1e8cDXOk_WyjoYoeslr"
         frameborder="0"
         allow="autoplay; encrypted-media"
         allowfullscreen
       ></iframe>
-    </div>
-
-    <section class="video-links">
-      <h2>Watch Individual Videos:</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=wH1Up7WTefU" target="_blank">Intro to UI/UX Design</a></li>
-        <li><a href="https://www.youtube.com/watch?v=[VIDEO_ID_2]" target="_blank">Video 2 Title</a></li>
-        <li><a href="https://www.youtube.com/watch?v=[VIDEO_ID_3]" target="_blank">Video 3 Title</a></li>
-        <!-- Add more as needed -->
-      </ul>
     </section>
+  </main>
 
-    <footer>
-      <p>Made with ❤️ | <a href="https://www.youtube.com/playlist?list=PLAr0hfIonl-E4U1e8cDXOk_WyjoYoeslr" target="_blank">View Full Playlist</a></p>
-    </footer>
-  </div>
+  <footer>
+    <p>Made with ❤️ | <a href="https://www.youtube.com/playlist?list=PLAr0hfIonl-E4U1e8cDXOk_WyjoYoeslr" target="_blank">View Full Playlist</a></p>
+  </footer>
 </body>
 </html>
