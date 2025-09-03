@@ -3,27 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My YouTube Playlist</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <title>UI Design Playlist</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>UI/UX Design Playlist 🎨</h1>
-      <p>Learn design from this curated YouTube playlist.</p>
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+      <div class="title-area">
+        <h1>UI/UX Design Playlist</h1>
+        <button id="darkModeToggle">🌙 Dark Mode</button>
+      </div>
+      <p>Level up your design skills with this YouTube playlist.</p>
     </header>
 
-    <div class="video-container">
-      <iframe 
+    <div class="video-wrapper">
+      <iframe
         src="https://www.youtube.com/embed/videoseries?list=PLAr0hfIonl-E4U1e8cDXOk_WyjoYoeslr"
-        frameborder="0" 
-        allow="autoplay; encrypted-media" 
+        frameborder="0"
+        allow="autoplay; encrypted-media"
         allowfullscreen
       ></iframe>
     </div>
 
+    <section class="video-links">
+      <h2>Watch Individual Videos:</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=wH1Up7WTefU" target="_blank">Intro to UI/UX Design</a></li>
+        <li><a href="https://www.youtube.com/watch?v=[VIDEO_ID_2]" target="_blank">Video 2 Title</a></li>
+        <li><a href="https://www.youtube.com/watch?v=[VIDEO_ID_3]" target="_blank">Video 3 Title</a></li>
+        <!-- Add more as needed -->
+      </ul>
+    </section>
+
     <footer>
-      <p>Made with ❤️ | <a href="https://www.youtube.com/playlist?list=PLAr0hfIonl-E4U1e8cDXOk_WyjoYoeslr" target="_blank">View on YouTube</a></p>
+      <p>Made with ❤️ | <a href="https://www.youtube.com/playlist?list=PLAr0hfIonl-E4U1e8cDXOk_WyjoYoeslr" target="_blank">View Full Playlist</a></p>
     </footer>
   </div>
 </body>
