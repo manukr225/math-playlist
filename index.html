@@ -3,66 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UI Design Playlist</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <title>Quant Playlist - Grid View</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f9fc;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e86de;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card-title {
+      padding: 1rem;
+      font-weight: bold;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .card a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      background: #eee;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <div class="logo-container">
-      <img src="assets/logo.png" alt="Logo" class="logo" />
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Popular Videos</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <h1>Quant Preparation Videos</h1>
   </header>
 
-  <main>
-    <section class="video-section">
-      <h1>Popular Videos</h1>
-      <div class="video-grid">
-        <!-- Video 1: Complete Quant For Bank Exams -->
-        <div class="video-item">
-          <img src="https://img.youtube.com/vi/eOqurZ2JkrQ/maxresdefault.jpg" alt="Complete Quant For Bank Exams" />
-          <div class="video-overlay">
-            <a href="https://www.youtube.com/watch?v=eOqurZ2JkrQ&list=PLAr0hfIonl-GxRd26o0YHhOb6czgvNN9M" target="_blank">Watch Now</a>
-          </div>
-        </div>
+  <section class="grid-container">
+    <!-- Video 1 -->
+    <div class="card">
+      <a href="https://www.youtube.com/watch?v=wH1Up7WTefU&list=PLAr0hfIonl-E4U1e8cDXOk_WyjoYoeslr&t=28s" target="_blank">
+        <img src="https://img.youtube.com/vi/wH1Up7WTefU/maxresdefault.jpg" alt="Percentage">
+        <div class="card-title">Percentage</div>
+      </a>
+    </div>
 
-        <!-- Video 2: ONE Video - ONE Chapter ✅ -->
-        <div class="video-item">
-          <img src="https://img.youtube.com/vi/cNUHy7MlGeQ/maxresdefault.jpg" alt="ONE Video - ONE Chapter ✅" />
-          <div class="video-overlay">
-            <a href="https://www.youtube.com/watch?v=cNUHy7MlGeQ&list=PLAr0hfIonl-HxgXwjfpisrpff07vgZrAY" target="_blank">Watch Now</a>
-          </div>
-        </div>
+    <!-- Video 2 -->
+    <div class="card">
+      <a href="https://www.youtube.com/watch?v=eOqurZ2JkrQ&list=PLAr0hfIonl-GxRd26o0YHhOb6czgvNN9M" target="_blank">
+        <img src="https://img.youtube.com/vi/eOqurZ2JkrQ/maxresdefault.jpg" alt="Complete Quant For Bank Exams">
+        <div class="card-title">Complete Quant For Bank Exams</div>
+      </a>
+    </div>
 
-        <!-- Video 3: Bank Mains Exam Complete Crash Course 2025 -->
-        <div class="video-item">
-          <img src="https://img.youtube.com/vi/nBWTJn4bVpI/maxresdefault.jpg" alt="Bank Mains Exam Complete Crash Course 2025" />
-          <div class="video-overlay">
-            <a href="https://www.youtube.com/watch?v=nBWTJn4bVpI&list=PLAr0hfIonl-G7WD_S4OuIeXgCjWIRbUZu" target="_blank">Watch Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Video 3 -->
+    <div class="card">
+      <a href="https://www.youtube.com/watch?v=cNUHy7MlGeQ&list=PLAr0hfIonl-HxgXwjfpisrpff07vgZrAY" target="_blank">
+        <img src="https://img.youtube.com/vi/cNUHy7MlGeQ/maxresdefault.jpg" alt="ONE Video - ONE Chapter ✅">
+        <div class="card-title">ONE Video - ONE Chapter ✅</div>
+      </a>
+    </div>
 
-    <section class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLAr0hfIonl-E4U1e8cDXOk_WyjoYoeslr"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-      ></iframe>
-    </section>
-  </main>
+    <!-- Video 4 -->
+    <div class="card">
+      <a href="https://www.youtube.com/watch?v=nBWTJn4bVpI&list=PLAr0hfIonl-G7WD_S4OuIeXgCjWIRbUZu" target="_blank">
+        <img src="https://img.youtube.com/vi/nBWTJn4bVpI/maxresdefault.jpg" alt="Bank Mains Exam Crash Course 2025">
+        <div class="card-title">Bank Mains Exam Crash Course 2025</div>
+      </a>
+    </div>
+  </section>
 
   <footer>
-    <p>Made with ❤️ | <a href="https://www.youtube.com/playlist?list=PLAr0hfIonl-E4U1e8cDXOk_WyjoYoeslr" target="_blank">View Full Playlist</a></p>
+    &copy; 2025 Quant Learning. All rights reserved.
   </footer>
+
 </body>
 </html>
